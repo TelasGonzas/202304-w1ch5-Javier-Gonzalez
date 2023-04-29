@@ -189,5 +189,15 @@ html {
 .footer .footer-logo-links .footer-logo {
   padding: 1rem;
 }
+@media only screen and (min-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

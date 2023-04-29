@@ -71,4 +71,12 @@ html {
       padding: 1rem;
     }
   }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    justify-content: space-between;
+    padding: 3rem;
+  }
 }
