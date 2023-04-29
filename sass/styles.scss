@@ -11,9 +11,27 @@ $breakpoint_desktop: 600px;
 html {
   min-height: 100%;
 }
-
+.burger-button {
+  background: none;
+  border: none;
+}
 .header-section {
+  font-family: "Rubik", sans-serif;
   background-image: url("./images/header-background.jpg");
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  .header-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 3em;
+  }
+  .header-link-list {
+    display: none;
+  }
+  .header-log {
+    display: none;
+  }
 }
 
 .footer {
