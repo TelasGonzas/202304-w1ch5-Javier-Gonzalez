@@ -7,9 +7,15 @@ $breakpoint_desktop: 600px;
     @content;
   }
 }
+
 html {
   min-height: 100%;
 }
+
+.header-section {
+  background-image: url("./images/header-background.jpg");
+}
+
 .footer {
   color: white;
   background-color: rgb(18, 27, 37);
@@ -27,6 +33,7 @@ html {
       margin-top: 3rem;
     }
   }
+
   .copyright {
     font-size: 1.5em;
     margin: 1rem;
@@ -59,6 +66,7 @@ html {
     .footer-title__logo {
       margin-bottom: 0.8rem;
     }
+
     .footer-logo-block {
       display: flex;
       flex-wrap: wrap;
@@ -67,10 +75,12 @@ html {
       align-items: center;
       gap: 2rem;
     }
+
     .footer-logo {
       padding: 1rem;
     }
   }
+
   @include desktop {
     display: flex;
     flex-direction: row;
