@@ -1,6 +1,6 @@
 @use "resets";
 
-$breakpoint_desktop: 600px;
+$breakpoint_desktop: 850px;
 
 @mixin desktop {
   @media only screen and (min-width: #{$breakpoint_desktop}) {
@@ -11,10 +11,7 @@ $breakpoint_desktop: 600px;
 html {
   min-height: 100%;
 }
-.burger-button {
-  background: none;
-  border: none;
-}
+
 .header-section {
   font-family: "Rubik", sans-serif;
   background-image: url("./images/header-background.jpg");
@@ -25,12 +22,57 @@ html {
     color: white;
     text-decoration: none;
     font-size: 3em;
+    display: flex;
+    align-items: center;
   }
   .header-link-list {
     display: none;
   }
   .header-log {
     display: none;
+  }
+
+  @include desktop {
+    display: flex;
+    .burger {
+      display: none;
+    }
+
+    .header-link-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+
+      .header-links {
+        margin-inline: 0.5rem;
+        color: white;
+        text-decoration: none;
+      }
+      .header-links:hover {
+        position: absolute;
+        border-bottom: 2rem rgb(234, 94, 68);
+      }
+    }
+    .header-log {
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      margin: 2rem;
+      align-items: center;
+      .sign-button {
+        background-color: #ff7757;
+        border: none;
+        color: white;
+        margin-inline: 1.5rem;
+        border-radius: 7%;
+        width: 5rem;
+        padding: 1rem;
+      }
+      .log-link {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -46,7 +88,7 @@ html {
     color: white;
     text-decoration: none;
     padding: 1rem;
-    font-size: 4em;
+    font-size: 3em;
     .footer-logo {
       margin-top: 3rem;
     }

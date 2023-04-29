@@ -133,11 +133,6 @@ html {
   min-height: 100%;
 }
 
-.burger-button {
-  background: none;
-  border: none;
-}
-
 .header-section {
   font-family: "Rubik", sans-serif;
   background-image: url("./images/header-background.jpg");
@@ -149,12 +144,56 @@ html {
   color: white;
   text-decoration: none;
   font-size: 3em;
+  display: flex;
+  align-items: center;
 }
 .header-section .header-link-list {
   display: none;
 }
 .header-section .header-log {
   display: none;
+}
+@media only screen and (min-width: 850px) {
+  .header-section {
+    display: flex;
+  }
+  .header-section .burger {
+    display: none;
+  }
+  .header-section .header-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  .header-section .header-link-list .header-links {
+    margin-inline: 0.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  .header-section .header-link-list .header-links:hover {
+    position: absolute;
+    border-bottom: 2rem rgb(234, 94, 68);
+  }
+  .header-section .header-log {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+    align-items: center;
+  }
+  .header-section .header-log .sign-button {
+    background-color: #ff7757;
+    border: none;
+    color: white;
+    margin-inline: 1.5rem;
+    border-radius: 7%;
+    width: 5rem;
+    padding: 1rem;
+  }
+  .header-section .header-log .log-link {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .footer {
@@ -169,7 +208,7 @@ html {
   color: white;
   text-decoration: none;
   padding: 1rem;
-  font-size: 4em;
+  font-size: 3em;
 }
 .footer .homepage-link .footer-logo {
   margin-top: 3rem;
@@ -213,7 +252,7 @@ html {
 .footer .footer-logo-links .footer-logo {
   padding: 1rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 850px) {
   .footer {
     display: flex;
     flex-direction: row;
