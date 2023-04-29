@@ -1,8 +1,8 @@
-$breakpoint_mobile: 600px;
+$breakpoint_desktop: 600px;
 
 // SCSS Mixins
-@mixin mobile {
-  @media only screen and (min-width: #{$breakpoint_mobile}) {
+@mixin desktop {
+  @media only screen and (min-width: #{$breakpoint_desktop}) {
     @content;
   }
 }

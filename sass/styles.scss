@@ -1,3 +1,74 @@
+@use "resets";
+
+$breakpoint_desktop: 600px;
+
+@mixin desktop {
+  @media only screen and (min-width: #{$breakpoint_desktop}) {
+    @content;
+  }
+}
 html {
+  min-height: 100%;
+}
+.footer {
+  color: white;
   background-color: rgb(18, 27, 37);
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  height: 33%auto;
+
+  .homepage-link {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 4em;
+    .footer-logo {
+      margin-top: 3rem;
+    }
+  }
+  .copyright {
+    font-size: 1.5em;
+    margin: 1rem;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 10rem;
+
+      .footer-title {
+        font-size: 1.4em;
+      }
+    }
+  }
+  .footer-logo-links {
+    padding: 1rem;
+
+    .footer-title__logo {
+      margin-bottom: 0.8rem;
+    }
+    .footer-logo-block {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+    }
+    .footer-logo {
+      padding: 1rem;
+    }
+  }
 }
