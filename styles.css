@@ -133,6 +133,10 @@ html {
   min-height: 100%;
 }
 
+.header-section {
+  background-image: url("./images/header-background.jpg");
+}
+
 .footer {
   color: white;
   background-color: rgb(18, 27, 37);
