@@ -171,14 +171,13 @@ html {
     text-decoration: none;
   }
   .header-section .header-link-list .header-links:hover {
-    position: absolute;
     border-bottom: 2rem rgb(234, 94, 68);
   }
   .header-section .header-log {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    margin: 2rem;
+    margin-block: 2rem;
     align-items: center;
   }
   .header-section .header-log .sign-button {

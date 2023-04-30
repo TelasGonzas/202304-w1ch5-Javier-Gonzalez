@@ -49,7 +49,6 @@ html {
         text-decoration: none;
       }
       .header-links:hover {
-        position: absolute;
         border-bottom: 2rem rgb(234, 94, 68);
       }
     }
@@ -57,7 +56,7 @@ html {
       display: flex;
       align-content: center;
       flex-wrap: wrap;
-      margin: 2rem;
+      margin-block: 2rem;
       align-items: center;
       .sign-button {
         background-color: #ff7757;
