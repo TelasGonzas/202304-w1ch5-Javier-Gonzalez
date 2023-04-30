@@ -133,54 +133,64 @@ html {
   min-height: 100%;
 }
 
-.header-section {
-  font-family: "Rubik", sans-serif;
+.header {
   background-image: url("./images/header-background.jpg");
+}
+.header .header-section {
+  font-family: "Rubik", sans-serif;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
-.header-section .header-logo {
+.header .header-section .header-logo {
   color: white;
   text-decoration: none;
   font-size: 3em;
   display: flex;
   align-items: center;
 }
-.header-section .header-link-list {
+.header .header-section .header-logo-image {
+  padding: 1rem;
+}
+.header .header-section .header-link-list {
   display: none;
 }
-.header-section .header-log {
+.header .header-section .header-log {
   display: none;
 }
 @media only screen and (min-width: 850px) {
-  .header-section {
+  .header .header-section {
     display: flex;
   }
-  .header-section .burger {
+  .header .header-section .burger {
     display: none;
   }
-  .header-section .header-link-list {
+  .header .header-section .header-link-list {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
   }
-  .header-section .header-link-list .header-links {
+  .header .header-section .header-link-list .header-links {
     margin-inline: 0.5rem;
     color: white;
     text-decoration: none;
+    background-image: linear-gradient(#ff7757, #ff7757);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
   }
-  .header-section .header-link-list .header-links:hover {
-    border-bottom: 2rem rgb(234, 94, 68);
+  .header .header-section .header-link-list .header-links:hover {
+    background-size: 100% 2px;
   }
-  .header-section .header-log {
+  .header .header-section .header-log {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     margin-block: 2rem;
     align-items: center;
   }
-  .header-section .header-log .sign-button {
+  .header .header-section .header-log .sign-button {
     background-color: #ff7757;
     border: none;
     color: white;
@@ -189,9 +199,37 @@ html {
     width: 5rem;
     padding: 1rem;
   }
-  .header-section .header-log .log-link {
+  .header .header-section .header-log .log-link {
     color: white;
     text-decoration: none;
+  }
+}
+.header .welcome {
+  color: white;
+  padding: 1rem;
+  margin-inline: 2rem;
+  padding-bottom: 2rem;
+}
+.header .welcome-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+}
+.header .welcome-phrase {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  padding-top: 1.5rem;
+}
+@media only screen and (min-width: 850px) {
+  .header .welcome {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20rem;
+  }
+  .header .welcome-title {
+    font-size: 5em;
+  }
+  .header .welcome-phrase {
+    font-size: 1.5em;
   }
 }
 

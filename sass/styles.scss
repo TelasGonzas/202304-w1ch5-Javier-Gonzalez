@@ -12,65 +12,108 @@ html {
   min-height: 100%;
 }
 
-.header-section {
-  font-family: "Rubik", sans-serif;
+.header {
   background-image: url("./images/header-background.jpg");
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  .header-logo {
-    color: white;
-    text-decoration: none;
-    font-size: 3em;
-    display: flex;
-    align-items: center;
-  }
-  .header-link-list {
-    display: none;
-  }
-  .header-log {
-    display: none;
-  }
 
-  @include desktop {
+  .header-section {
+    font-family: "Rubik", sans-serif;
+
     display: flex;
-    .burger {
+    justify-content: space-between;
+    padding: 1rem;
+    .header-logo {
+      color: white;
+      text-decoration: none;
+      font-size: 3em;
+      display: flex;
+      align-items: center;
+    }
+    .header-logo-image {
+      padding: 1rem;
+    }
+    .header-link-list {
+      display: none;
+    }
+    .header-log {
       display: none;
     }
 
-    .header-link-list {
+    @include desktop {
       display: flex;
-      flex-wrap: wrap;
-      align-content: space-around;
-
-      .header-links {
-        margin-inline: 0.5rem;
-        color: white;
-        text-decoration: none;
+      .burger {
+        display: none;
       }
-      .header-links:hover {
-        border-bottom: 2rem rgb(234, 94, 68);
+
+      .header-link-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+
+        .header-links {
+          margin-inline: 0.5rem;
+          color: white;
+          text-decoration: none;
+
+          background-image: linear-gradient(#ff7757, #ff7757);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 2px;
+          transition: background-size 0.3s;
+        }
+        .header-links:hover {
+          background-size: 100% 2px;
+        }
+      }
+      .header-log {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        margin-block: 2rem;
+        align-items: center;
+        .sign-button {
+          background-color: #ff7757;
+          border: none;
+          color: white;
+          margin-inline: 1.5rem;
+          border-radius: 7%;
+          width: 5rem;
+          padding: 1rem;
+        }
+        .log-link {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
-    .header-log {
+  }
+  .welcome {
+    color: white;
+    padding: 1rem;
+    margin-inline: 2rem;
+    padding-bottom: 2rem;
+  }
+  .welcome-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+  }
+  .welcome-phrase {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5em;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    .welcome {
       display: flex;
-      align-content: center;
       flex-wrap: wrap;
-      margin-block: 2rem;
-      align-items: center;
-      .sign-button {
-        background-color: #ff7757;
-        border: none;
-        color: white;
-        margin-inline: 1.5rem;
-        border-radius: 7%;
-        width: 5rem;
-        padding: 1rem;
-      }
-      .log-link {
-        color: white;
-        text-decoration: none;
-      }
+      padding-right: 20rem;
+    }
+
+    .welcome-title {
+      font-size: 5em;
+    }
+
+    .welcome-phrase {
+      font-size: 1.5em;
     }
   }
 }
