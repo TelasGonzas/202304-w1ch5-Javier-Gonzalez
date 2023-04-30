@@ -8,10 +8,6 @@ $breakpoint_desktop: 850px;
   }
 }
 
-html {
-  min-height: 100%;
-}
-
 .header {
   background-image: url("./images/header-background.jpg");
 
@@ -53,15 +49,11 @@ html {
           margin-inline: 0.5rem;
           color: white;
           text-decoration: none;
-
-          background-image: linear-gradient(#ff7757, #ff7757);
-          background-position: 0% 100%;
-          background-repeat: no-repeat;
-          background-size: 0% 2px;
-          transition: background-size 0.3s;
         }
         .header-links:hover {
           background-size: 100% 2px;
+          text-decoration: underline #ff7757;
+          text-underline-offset: 0.5rem;
         }
       }
       .header-log {
@@ -117,7 +109,11 @@ html {
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
+    @include desktop {
+      max-width: 90%;
+    }
   }
+
   .form-input {
     margin-top: 2rem;
     margin-inline: 2rem;
@@ -127,16 +123,28 @@ html {
     .form-input__box {
       background-color: white;
       border-radius: 8%;
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        justify-content: space-between;
+        border-radius: 0%;
+
+        .input-text {
+          max-width: 75%;
+        }
+      }
 
       .form-input__text {
         display: flex;
         flex-direction: column;
         padding-block: 2rem;
         padding-inline: 1rem;
-        border-bottom: #ff7757 1px solid;
+        border-bottom: #5c5b5a 1px solid;
         max-width: 80%;
         margin-left: 1rem;
         margin-bottom: 1rem;
+        justify-content: space-between;
       }
       .form-title {
         font-family: "Rubik", sans-serif;
@@ -144,23 +152,23 @@ html {
       .input-text {
         max-width: 50%;
         border: none;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
         font-family: "Playfair Display", serif;
       }
     }
   }
-  .form-button {
-    background-color: #ff7757;
-    text-align: center;
+}
+.form-button {
+  background-color: #ff7757;
+  text-align: center;
 
-    padding: 3rem;
-  }
-  .book-button {
-    background-color: #ff7757;
-    font-size: 2em;
-    border: none;
-    font-family: "Playfair Display", serif;
-  }
+  padding: 3rem;
+}
+.book-button {
+  background-color: #ff7757;
+  font-size: 2em;
+  border: none;
+  font-family: "Playfair Display", serif;
 }
 
 .footer {
