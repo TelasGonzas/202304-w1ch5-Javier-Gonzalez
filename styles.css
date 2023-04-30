@@ -203,11 +203,21 @@ html {
     color: white;
     text-decoration: none;
   }
+  .header .header-section .welcome {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 20rem;
+  }
+  .header .header-section .welcome-title {
+    font-size: 5em;
+  }
+  .header .header-section .welcome-phrase {
+    font-size: 1.5em;
+  }
 }
 .header .welcome {
   color: white;
   padding: 1rem;
-  margin-inline: 2rem;
   padding-bottom: 2rem;
 }
 .header .welcome-title {
@@ -219,18 +229,50 @@ html {
   font-size: 1.5em;
   padding-top: 1.5rem;
 }
-@media only screen and (min-width: 850px) {
-  .header .welcome {
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 20rem;
-  }
-  .header .welcome-title {
-    font-size: 5em;
-  }
-  .header .welcome-phrase {
-    font-size: 1.5em;
-  }
+.header .form {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.header .form-input {
+  margin-top: 2rem;
+  margin-inline: 2rem;
+  padding-top: 1rem;
+  padding-inline: 1rem;
+}
+.header .form-input .form-input__box {
+  background-color: white;
+  border-radius: 8%;
+}
+.header .form-input .form-input__box .form-input__text {
+  display: flex;
+  flex-direction: column;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-bottom: #ff7757 1px solid;
+  max-width: 80%;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.header .form-input .form-input__box .form-title {
+  font-family: "Rubik", sans-serif;
+}
+.header .form-input .form-input__box .input-text {
+  max-width: 50%;
+  border: none;
+  padding-top: 0.5rem;
+  font-family: "Playfair Display", serif;
+}
+.header .form-button {
+  background-color: #ff7757;
+  text-align: center;
+  padding: 3rem;
+}
+.header .book-button {
+  background-color: #ff7757;
+  font-size: 2em;
+  border: none;
+  font-family: "Playfair Display", serif;
 }
 
 .footer {
